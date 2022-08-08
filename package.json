@@ -1,6 +1,6 @@
 {
-  "name": "ally-custom-driver",
-  "version": "0.0.0",
+  "name": "ally-okta-driver",
+  "version": "0.0.2",
   "description": "A boilerplate for a custom ally driver",
   "main": "build/providers/index.js",
   "files": [
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@adonisjs/ally": "^4.0.0",
     "@adonisjs/core": "^5.1.8",
-    "@types/node": "^15.12.2",
+    "@types/node": "^18.6.5",
     "del-cli": "^3.0.1",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
@@ -45,12 +45,16 @@
   "adonisjs": {
     "instructionsMd": "./build/instructions.md",
     "env": {
-      "YOUR_DRIVER_CLIENT_ID": "",
-      "YOUR_DRIVER_CLIENT_SECRET": ""
+      "OKTA_CLIENT_ID": "",
+      "OKTA_CLIENT_SECRET": ""
     },
-    "types": "ally-custom-driver",
+    "types": "ally-okta-driver",
     "providers": [
-      "ally-custom-driver"
+      "ally-okta-driver"
     ]
+  },
+  "dependencies": {
+    "@okta/jwt-verifier": "^2.6.0",
+    "lodash": "^4.17.21"
   }
 }
