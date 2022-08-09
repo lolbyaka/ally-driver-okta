@@ -199,7 +199,7 @@ export class OktaDriver extends Oauth2Driver<OktaDriverAccessToken, OktaDriverSc
     if (this.ctx.request.input('oktaDomain') && this.ctx.request.input('oktaClientId')) {
       this.issuer =
         this.ctx.request.input('oktaIssuer') ||
-        `${this.ctx.request.input('oktaDomain')}/oauth2/default`
+        `https://${this.ctx.request.input('oktaDomain')}/oauth2/default`
       this.domain = this.ctx.request.input('oktaDomain')
       this.clientId = this.ctx.request.input('oktaClientId')
     }
