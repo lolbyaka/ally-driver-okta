@@ -1,6 +1,6 @@
 {
   "name": "ally-okta-driver",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A boilerplate for a custom ally driver",
   "main": "build/providers/index.js",
   "files": [
