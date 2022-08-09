@@ -220,10 +220,8 @@ export class OktaDriver extends Oauth2Driver<OktaDriverAccessToken, OktaDriverSc
 
       const userProfile = await this.getUserInfo(accessTokenResponse.value)
 
-      const allyUser = this.buildAllyUser(userProfile, accessTokenResponse)
-
       return {
-        ...allyUser,
+        ...userProfile,
         token: accessTokenResponse.value,
       }
     } catch (e) {
