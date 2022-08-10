@@ -1,20 +1,12 @@
 {
+  "extends": "./node_modules/@adonisjs/mrm-preset/_tsconfig",
   "compilerOptions": {
-    "target": "es2020",
-    "module": "commonjs",
-    "lib": ["es2020"],
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "declaration": true,
-    "moduleResolution": "node",
-    "rootDir": "./",
-    "outDir": "./build",
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "types": ["@types/node", "@adonisjs/core", "@adonisjs/ally"]
+    "types": ["@types/node", "@adonisjs/core"],
+    "skipLibCheck": true
   },
-  "include": ["**/*"],
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "**.ts",
+    "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx",
+    "providers/**/*.ts", "providers/**/*.d.ts", "providers/**/*.tsx"
+  ],
 }

@@ -1,6 +1,3 @@
-/// <reference types="@adonisjs/ally" />
-/// <reference types="@adonisjs/http-server/build/adonis-typings" />
-/// <reference types="@adonisjs/ally" />
 import type { AllyUserContract } from '@ioc:Adonis/Addons/Ally';
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
 import { Oauth2Driver, ApiRequest } from '@adonisjs/ally/build/standalone';
